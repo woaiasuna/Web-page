@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8		<title>asuna</title>">
+
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		#first{
+			width: 1560px;
+			height: 30px;
+			background-color: #f4f4f4;
+		}
+		#fi-a{
+			width: 200px;
+			height: 30px;
+			margin-left: 180px;
+			display: inline-block;
+			padding-top: 3px;
+			text-align: center;
+		}
+		#fi-b{
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			margin-left: 20px;
+		}
+		#fi-c{
+			margin-left: 600px;
+			display: inline-block;
+		}
+		#second{
+			width: 1560px;
+			height: 160px;
+		}
+		input{
+			width: 410px;	
+			height: 40px;		
+			border: 3px solid red;
+		}
+		#se-a{
+			float: left;
+			width: 210px;
+			height: 100px;
+			margin-left: 180px;
+			padding-top: 23px;
+		}
+		#se-b{
+			width: 416px;
+			height: 50px;
+			float: left;
+			padding-top: 40px;
+			padding-left: 150px;
+		}
+		#se-c{
+			float: left;
+			height: 46px;
+			width: 90px;
+			margin-top: 40px;			
+			background-color: #f83838;
+			text-align: center;
+		}
+		#se-c>p{
+			padding-top: 12px;
+			color: white;
+		}
+		#se-d{
+			float: left;
+			width: 150px;
+			height: 40px;
+			margin-left: 163px;
+			margin-top: 41px;
+			text-align: center;
+			background-color: #f5f5f5;
+		}
+		#span-a{
+			color: red;
+		}
+		#img-a{
+			padding-top: 2px;
+		}
+		#se-e{
+			width: 1560px;
+			height: 37px;
+			float: left;
+			border-bottom: 3px solid #e00304;
+
+		}
+		#se-e>ul{
+			margin-left: 190px;
+		}
+
+		#se-e>ul>li{
+			display: inline-block;
+			width: 104px;
+			padding-top: 8px;
+			text-align: center;
+			padding-bottom: 5px;
+		}
+		#se-e>ul>li:hover{
+			background-color: #fd0304;
+			color: white;
+			border-radius: 4px;
+		}
+		#third{
+			width: 1560px;
+			height: 653px;
+			background-color: #fbfbfb;
+		}
+		#th-a{
+			margin-left: 180px;
+			padding-top: 25px;
+		}
+		#th-b{
+			height: 45px;
+			width: 215px;
+			margin-left: 180px;
+			margin-top: 20px;
+			background-color: white;	
+		}
+		#th-c{
+			height: 510px;
+			width: 215px;
+			margin-top: 10px;
+			margin-left: 180px;
+			background-color: white;
+		}
+		#th-d{
+			height: 565px;
+			width: 955px;
+			margin-right: 100px;
+			position: absolute;
+			top: 256px;
+			left: 405px;
+			background-color: white;
+
+		}
+		#th-b-img{
+			padding-left: 42px;
+		}
+		#sp-b{
+			position: absolute;
+			top: 270px;
+			left: 270px;
+		}
+		#th-c-a{
+			position: absolute;
+			top: 335px;
+			left: 255px;
+		}
+		#th-c-spa{
+			position: absolute;
+			top: 333px;
+			left: 270px;
+		}
+		#th-c-b{
+			position: absolute;
+			top: 380px;
+			left: 255px;
+		}
+		#th-c-spb{
+			position: absolute;
+			top: 378px;
+			left: 270px;
+		}
+		#th-d-a{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			border: 1px dotted gray;
+		}
+		#th-d-b{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 20px;
+			left: 250px;
+			border: 1px dotted gray;
+		}
+		#th-d-c{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 20px;
+			left: 480px;
+			border: 1px dotted gray;
+		}
+		#th-d-d{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 20px;
+			left: 710px;
+			border: 1px dotted gray;
+		}
+		#th-d-e{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 290px;
+			left: 20px;
+			border: 1px dotted gray;
+		}
+		#th-d-f{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 290px;
+			left: 250px;
+			border: 1px dotted gray;
+		}
+		#th-d-g{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 290px;
+			left: 480px;
+			border: 1px dotted gray;
+		}
+		#th-d-h{
+			width: 220px;
+			height: 250px;
+			position: absolute;
+			top: 290px;
+			left: 710px;
+			border: 1px dotted gray;
+		}
+		#ti-a{
+			position: absolute;
+			top: 15px;
+			left: 40px;
+		}
+		#ti-b{
+			position: absolute;
+			top: 15px;
+			left: 40px;
+		}
+		#ti-c{
+			position: absolute;
+			top: 10px;
+			left: 40px;
+		}
+		#ti-d{
+			position: absolute;
+			top: 15px;
+			left: 25px;
+		}
+		#ti-e{
+			position: absolute;
+			top: 15px;
+			left: 40px;
+		}
+		#ti-f{
+			position: absolute;
+			top: 15px;
+			left: 40px;
+		}
+		#ti-g{
+			position: absolute;
+			top: 10px;
+			left: 40px;
+		}
+		#ti-h{
+			position: absolute;
+			top: 15px;
+			left: 25px;
+		}
+		#ti-i{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-j{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-k{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-l{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-m{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-n{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-o{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-p{
+			position: absolute;
+			top: 195px;
+			left: 60px;
+			color: #ccc;
+		}
+		#ti-q{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-r{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-s{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-t{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-u{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-v{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-w{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#ti-x{
+			position: absolute;
+			top: 220px;
+			left: 90px;
+		}
+		#fourth{
+			width: 1560px;
+			height: 150px;
+			background-color: #2e2e2e;
+		}
+		#fourth>ul{
+			width: 100px;
+			display : inline-block;
+			line-height: 37px;
+			padding-left: 180px;
+
+		}
+		#fourth>ul>li{
+			color: white;
+			list-style-type: none;
+		}
+		.f-a{
+			font-size: 16px;
+		}
+		.f-b{
+			font-size: 14px;
+		}
+		#fifth{
+			width: 1560px;
+			height: 105px;
+			background-color: #2e2e2e;
+		}
+		#fif-a{
+			width: 1200px;
+			height: 105px;
+			margin-left: 180px;
+			border-top: 1px solid #454545;
+		}
+		#fif-b{
+			text-align: center;
+			padding-top: 28px;	
+			font-size: 14px;
+			color: white;
+		}
+		#fif-c{
+			text-align: center;
+			font-size: 14px;
+			color: white;
+		}
+
+	</style>
+	</head>
+
+	<body>
+		<div id="first">
+			<div id="fi-a">
+				我的收藏&nbsp;&nbsp;&nbsp;&nbsp;E族之家手机版
+			</div>
+			<div id="fi-b">
+				<img src="./images/imges/图1.gif">328203328
+			</div>
+			<div id="fi-c">
+				扫描加入&nbsp;&nbsp;欢迎来到E族之家，请登录&nbsp;|&nbsp;请注册
+			</div>
+		</div>
+
+
+		<div id="second">
+			<div id="se-a">
+				<img src="./images/imges/作业设计图_06.gif">
+			</div>
+			<div id="se-b">
+				<input type="text" name="search" value="请输入关键词!">
+			</div>
+			<div id="se-c">
+				<p id="se-c-p">搜索</p>
+			</div>
+			<div id="se-d">
+				<img id="img-a" src="./images/imges/图4.gif">
+				<span>购物车(<span id="span-a">0</span>)件</span>
+			</div>
+			<div id="se-e">
+				<ul>
+					<li>首页</li>
+					<li>E族生活</li>
+					<li>E族服务</li>
+					<li>E族爱心</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<div id="third">
+			<div id="th-a">
+				当前位置：&nbsp;E族爱心>食品
+			</div>
+			<div id="th-b">
+				<img id="th-b-img" src="images/imges/作业设计图_14.gif">
+				<span id="sp-b">全部分类</span>
+			</div>
+			<div id="th-c">
+				<img id="th-c-a" src="images/imges/作业设计图_29.gif"><span id="th-c-spa">食品</span>
+				<img id="th-c-b" src="images/imges/作业设计图_29.gif"><span id="th-c-spb">生活用品</span>
+			</div>
+			<div id="th-d">
+				<div id="th-d-a">
+					<img id="ti-a" src="images/imges/作业设计图_20.gif">
+					<p id="ti-i">精品辣椒100g</p>
+					<p id="ti-q">¥90.00</p>
+				</div>
+				<div id="th-d-b">
+					<img id="ti-b" src="images/imges/作业设计图_22.gif">
+					<p id="ti-j">特技百香果10斤</p>
+					<p id="ti-r">¥90.00</p>
+				</div>
+				<div id="th-d-c">
+					<img id="ti-c" src="images/imges/作业设计图_17.gif">
+					<p id="ti-k">万威啤酒500ml</p>
+					<p id="ti-s">¥90.00</p>
+				</div>
+				<div id="th-d-d">
+					<img id="ti-d" src="images/imges/作业设计图_25.gif">
+					<p id="ti-l">万威啤酒500ml</p>
+					<p id="ti-t">¥90.00</p>
+				</div>
+				<div id="th-d-e">
+					<img id="ti-e" src="images/imges/作业设计图_20.gif">
+					<p id="ti-m">精品辣椒100g</p>
+					<p id="ti-u">¥90.00</p>
+				</div>
+				<div id="th-d-f">
+					<img id="ti-f" src="images/imges/作业设计图_22.gif">
+					<p id="ti-n">特技百香果10斤</p>
+					<p id="ti-v">¥90.00</p>
+				</div>
+				<div id="th-d-g">
+					<img id="ti-g" src="images/imges/作业设计图_17.gif">
+					<p id="ti-o">万威啤酒500ml</p>
+					<p id="ti-w">¥90.00</p>
+				</div>
+				<div id="th-d-h">
+					<img id="ti-h" src="images/imges/作业设计图_25.gif">
+					<p id="ti-p">万威啤酒500ml</p>
+					<p id="ti-x">¥90.00</p>
+				</div>
+				
+			</div>
+			
+
+
+		</div>
+
+
+		<div id="fourth">
+			<ul>
+				<li class="f-a">新手上路</li><li class="f-b">售后流程</li><li class="f-b">购物流程</li><li class="f-b">订购方式</li>
+			</ul>
+			<ul>
+				<li class="f-a">配送方式</li><li class="f-b">货到付款区域</li><li class="f-b">配送支付方式</li><li class="f-b">支付方式说明</li>
+			</ul>
+			<ul>
+				<li class="f-a">购物指南</li><li class="f-b">常见问题</li><li class="f-b">配送支付查询</li><li class="f-b">注册新会员</li>
+			</ul>
+			<ul>
+				<li class="f-a">售后服务</li><li class="f-b">退换货原则</li><li class="f-b">订购流程</li><li class="f-b">换货流程</li>
+			</ul>
+			<ul>
+				<li class="f-a">关于我们</li><li class="f-b">网站故障报告</li><li class="f-b">售后服务保证</li><li class="f-b">投诉及建议</li>
+			</ul>
+			
+		</div>
+
+		<div id="fifth">
+			<div id="fif-a">
+				<p id="fif-b">E族生活&nbsp;|&nbsp;居家维修保养&nbsp;|&nbsp;住宿优惠信息&nbsp;|&nbsp;出行接送&nbsp;|&nbsp;E族生活&nbsp;|&nbsp;E族爱心&nbsp;|&nbsp;积分商城</p><br/>
+				<p id="fif-c">©&nbsp;2017-2018&nbsp;E族之家&nbsp;版权所有，并保留所有版权。ICP备案证书号：粤ICP备17127392号</p>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
