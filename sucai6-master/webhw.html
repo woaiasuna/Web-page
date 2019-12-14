@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>homework</title>
+	<style>
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		#top{
+			width: 1283px;
+			height: 420px;
+			border-left: 2px solid black;
+			border-right: 2px solid black;
+		}
+		#middlea{
+			height: 20px;
+			width: 1283px;
+			background: lightgray;
+		}
+		#middlea>img{
+			position: absolute;
+			top: 2px;
+			left: 200px;
+		}
+		#alter{
+			width: 8400px;
+			height: 382px;
+			position: absolute;
+			left: -1200px;
+			top: 30px;
+		}
+		#subscript>li{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			font-size: 15px;
+			background: #ccc;
+			border-radius: 50%;
+			text-align: center;
+			margin: 25px;
+			cursor: pointer;
+			color: black;
+		}
+		#subscript>.active{
+			background: red;
+			color: white;
+		}
+		#subscript{
+			position: absolute;
+			top: 330px;
+			left: 450px;
+		}
+		.slide>img{
+			width: 1200px;
+			height: 382px;
+		}
+		#left{
+			position: absolute;
+			left: 100px;
+			top: 200px;
+		}
+		#right{
+			position: absolute;
+			top: 200px;
+			left: 1080px;
+		}
+		.slide{
+			width: 1200px;
+			height: 382px;
+			float: left;
+		}
+		span{
+			display: block;
+			width: 30px;
+			height: 50px;
+			text-align: center;
+			cursor: pointer;
+			opacity: 0;
+			background: rgb(255,0,0);
+			font-size: 33px;
+			color: #ccc;
+		}
+		#box{
+			overflow: hidden;
+			width: 1200px;
+			height: 382px;
+			position: absolute;
+			top: 0px;
+			left: 40px;
+		}
+		#words{
+			color: red;
+			font-size: 15px;
+			position: relative;
+			left: 0px;
+		}
+		#word{
+			height: 19px;
+			width: 500px;
+			position: absolute;
+			left: 900px;
+		}
+		#over{
+			height: 19px;
+			width: 900px;
+			position: absolute;
+			left: 220px;
+			overflow: hidden;
+		}
+	</style>
+	<script src="./animate.js"></script>
+</head>
+<body>
+	<div id="top">
+		<div id="middlea">
+			<img src="./images/a15.png">
+			<div id="over">
+				<div id="word">
+					<p id="words">[温馨提示]最近有不少不法分子在网上骗人，请大家注意!!!</p>
+				</div>
+			</div>
+		</div>
+		<div id="box">
+			<div id="alter">
+				<div class="slide"><img src="./images/b5.png"></div>
+				<div class="slide"><img src="./images/b1.png"></div>
+				<div class="slide"><img src="./images/b2.png"></div>
+				<div class="slide"><img src="./images/b3.png"></div>
+				<div class="slide"><img src="./images/b4.png"></div>
+				<div class="slide"><img src="./images/b5.png"></div>
+				<div class="slide"><img src="./images/b1.png"></div>
+			</div>
+			<span id="left"><</span>
+			<span id="right">></span>
+			<ul id="subscript">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+<script>
+	var top=document.getElementById("top");
+	var middlea=document.getElementById("middlea");
+	var box=document.getElementById("box");
+	var alter=document.getElementById("alter");
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var slide=document.getElementsByClassName("slide");
+	var liList=document.getElementById("subscript").children;
+	var word=document.getElementById("word");
+	var index=1;
+	var index1=85;
+	var timer;
+	var isMoving=false;
+	function next(){
+		index++;
+		liChange();
+		animate(alter,{left:-1200*index},function(){
+			if(index==6){
+				alter.style.left="-1200px";
+				index=1;
+			}
+		})
+	}
+	function previous(){
+		index--;
+		liChange();
+		animate(alter,{left:-1200*index},function(){
+			if(index==0){
+				alter.style.left="-6000px";
+				index=5;
+			}
+		})
+	}
+	var timer=setInterval(next,3000);
+	box.onmouseover=function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		clearTimeout(timer);
+	}
+	box.onmouseout=function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		timer=setInterval(next,3000);
+	}
+	setInterval(function() {
+		index1--;
+		if(index1==-45){
+			word.style.left="900px";
+			index1=90;
+		}
+		animate(word,{left:10*index1})
+	},120);
+	right.onclick=next;
+	left.onclick=previous;
+	for(var i=0;i<liList.length;++i){
+		liList[i].idx=i;
+		liList[i].onclick=function(){
+			index=this.idx+1;
+			liChange();
+			animate(alter,{left:-1200*index});
+		}
+	}
+	function liChange(){
+		for(var i=0;i<liList.length;i++){
+			liList[i].className="";
+		}
+		if(index==6){
+			liList[0].className="active";
+		}
+		else if(index==0){
+			liList[4].className="active";
+		}
+		else{
+			liList[index-1].className="active";
+		}
+	}
+</script>
+</html>
